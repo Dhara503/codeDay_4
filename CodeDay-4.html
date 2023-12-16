@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's start code </title>
+</head>
+
+<body>
+    <script>
+        //Q.18 upper case method -1
+        const upperCase = (arr) => {
+            temp = arr.toString().toUpperCase();
+            return temp;
+        }
+        let text = 'hello world';
+        let uppCase = upperCase(text);
+        //    output
+        console.log(uppCase);
+        console.log(upperCase('hello world'));
+
+        //Q.19 lowerCase method-1 
+
+        const lowCase = (str) => {
+            string = str.toString().toLowerCase();
+            return string;
+        }
+        let text1 = 'HELLO';
+
+        //Output:
+        console.log(lowCase(text1));
+
+        //Q.20 Check if two arrays are equal or not
+        function areEqual(arr1, arr2) {
+            let N = arr1.length;
+            let M = arr2.length;
+
+            if (N != M) {
+                return false;
+            }
+            arr1.sort();
+            arr2.sort();
+
+            for (let i = 0; i < N; i++) {
+                if (arr1[i] != arr2[i]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+
+        let abc = [1, 2, 4, 3, 5, 6, 7];
+        let xyz = [2, 3, 1, 4, 6, 5, 7];
+
+        if (areEqual(abc, xyz)) {
+            document.write('Yes')
+        } else {
+            document.write('No')
+        };
+// Q.21 Rotate the array by 1,
+function rotate(arr, n){
+    var i = 0
+    var j = n-1
+    while(i != j){
+        let temp;
+ 
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j]= temp;
+        i =i+1
+    }
+}
+ 
+var arr = [1, 2, 3, 4, 5];
+var n = arr.length;
+ 
+document.write("Given array is <br>");
+for(var i = 0; i< n; i++)
+    document.write(arr[i] + " ");
+     
+rotate(arr, n);
+ 
+document.write("<br>Rotated array is <br>");
+for(var i = 0; i < n; i++)
+    document.write(arr[i] + " ");
+function rotate(arr, n){
+    var i = 0
+    var j = n-1
+    while(i != j){
+        let temp;
+ 
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j]= temp;
+        i =i+1
+    }
+}
+ 
+
+
+    </script>
+</body>
+
+</html>
